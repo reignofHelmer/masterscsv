@@ -298,6 +298,17 @@ const MastersPrograms = () => {
           <li>• <strong>Most expensive accommodation:</strong> Edinburgh, Glasgow (~£1,000-1,100/mo)</li>
         </ul>
       </div>
+      <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <h3 className="font-semibold text-blue-900 mb-2">💡 Scholarship Notes:</h3>
+        <ul className="text-sm text-blue-800 space-y-1">
+          <li>• <strong>Newcastle University:</strong> Best scholarship - up to 50% tuition or £7,000</li>
+          <li>• <strong>Buckinghamshire New:</strong> Best combined offer - £5,500 total</li>
+          <li>• <strong>Anglia Ruskin:</strong> Up to £4,000 for ARU graduates</li>
+          <li>• <strong>Glasgow Caledonian:</strong> £3,000 + 5% early payment for Nigerian students</li>
+          <li>• <strong>Middlesex:</strong> Chevening covers full tuition (highly competitive)</li>
+          <li>• <strong>Heriot Watt:</strong> £500,000+ scholarship pool - contact regional manager</li>
+        </ul>
+      </div>
     </div>
   );
 };
