@@ -7,7 +7,7 @@ const MastersPrograms = () => {
   const [showScholarshipsOnly, setShowScholarshipsOnly] = useState(false);
 
   const programs = [
-    // Cyber Security Programs
+    // Cyber Security Programs (Rating 4.0+, 1 year only)
     { university: "Newcastle University", course: "MSc Cyber Security", duration: "1 year", fees: 28800, rating: 4.8, distance: 280, scholarship: "Vice-Chancellor's Excellence: 50% tuition OR Vice-Chancellor's International: £7,000", scholarshipAmount: 14400, tier: "Premium" },
     { university: "University of York", course: "MSc Cyber Security", duration: "1 year", fees: 26900, rating: 4.7, distance: 200, scholarship: "None listed", scholarshipAmount: 0, tier: "Premium" },
     { university: "University of Surrey", course: "MSc Cyber Security", duration: "1 year", fees: 24500, rating: 4.6, distance: 25, scholarship: "None listed", scholarshipAmount: 0, tier: "Premium" },
@@ -15,78 +15,28 @@ const MastersPrograms = () => {
     { university: "Edinburgh Napier University", course: "MSc Cyber Security", duration: "1 year", fees: 17090, rating: 4.3, distance: 410, scholarship: "GlobalScholarships.com: $3,000 (≈£2,400)", scholarshipAmount: 2400, tier: "Excellent" },
     { university: "Glasgow Caledonian University", course: "Cyber Security MSc", duration: "1 year", fees: 16900, rating: 4.2, distance: 415, scholarship: "New to GCU: £3,000 (Nigerian students) + 5% early payment discount (£845)", scholarshipAmount: 3845, tier: "Excellent" },
     { university: "Nottingham Trent University", course: "MSc Cyber Security", duration: "1 year", fees: 18800, rating: 4.2, distance: 130, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "Sheffield Hallam University", course: "MSc Computing", duration: "1 year", fees: 18600, rating: 4.1, distance: 165, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
+    { university: "Sheffield Hallam University", course: "MSc Cyber Security", duration: "1 year", fees: 18600, rating: 4.1, distance: 165, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
     { university: "University of East Anglia", course: "MSc Cyber Security", duration: "1 year", fees: 21200, rating: 4.2, distance: 120, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
     { university: "Birmingham City University", course: "Cyber Security - MSc", duration: "1 year", fees: 17500, rating: 4.0, distance: 115, scholarship: "Postgraduate Merit-Based: £3,000", scholarshipAmount: 3000, tier: "Good" },
     { university: "Coventry University", course: "Cyber Security MSc", duration: "1 year", fees: 19850, rating: 4.0, distance: 95, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "De Montfort University", course: "Cyber Security MSc", duration: "1 year", fees: 17250, rating: 3.9, distance: 105, scholarship: "CEM Scholarship: £3,000", scholarshipAmount: 3000, tier: "Good" },
-    { university: "Teesside University", course: "MSc Cyber Security", duration: "1 year", fees: 15000, rating: 3.9, distance: 245, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Bedfordshire", course: "Cyber Security MSc", duration: "1 year", fees: 14600, rating: 3.8, distance: 40, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Bradford", course: "MSc Cyber Security", duration: "1 year", fees: 19494, rating: 3.9, distance: 210, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Brighton", course: "Cyber Security MSc", duration: "1 year", fees: 17020, rating: 3.9, distance: 60, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Derby", course: "MSc Cyber Security", duration: "1 year", fees: 15500, rating: 3.8, distance: 135, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
     { university: "University of Essex", course: "MSc Cyber Security", duration: "1 year", fees: 22750, rating: 4.0, distance: 70, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Lancashire", course: "MSc Cyber Security", duration: "1 year", fees: 19250, rating: 3.9, distance: 230, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Roehampton", course: "MSc Cyber Security", duration: "1 year", fees: 17500, rating: 3.7, distance: 8, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of South Wales", course: "MSc Cyber Security", duration: "1 year", fees: 16500, rating: 3.8, distance: 145, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Sunderland", course: "MSc Cybersecurity", duration: "1 year", fees: 16000, rating: 3.7, distance: 280, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of West London", course: "MSc Cyber Security", duration: "1 year", fees: 16250, rating: 3.8, distance: 3, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of West of England", course: "Cyber Security MSc", duration: "1 year", fees: 17200, rating: 3.9, distance: 120, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "Liverpool John Moores University", course: "Cyber Security, MSc", duration: "1 year", fees: 18250, rating: 3.9, distance: 210, scholarship: "International Achievement: £3,500", scholarshipAmount: 3500, tier: "Good" },
-    { university: "Anglia Ruskin University", course: "MSc Cyber Security", duration: "1 year", fees: 16800, rating: 3.6, distance: 50, scholarship: "International Postgraduate: up to £4,000", scholarshipAmount: 4000, tier: "Budget" },
-    { university: "Buckinghamshire New University", course: "MSc Cyber Security", duration: "1 year", fees: 15500, rating: 3.5, distance: 30, scholarship: "Vice Chancellor's International: £5,000 + Early Payment: £500", scholarshipAmount: 5500, tier: "Budget" },
-    { university: "London Metropolitan University", course: "Applied Cyber Security and Cloud Technology - MSc", duration: "1 year", fees: 17600, rating: 3.5, distance: 8, scholarship: "International Bright Futures: £3,000", scholarshipAmount: 3000, tier: "Budget" },
-    { university: "London Metropolitan University", course: "Computer Networking and Cyber Security - MSc", duration: "1 year", fees: 17600, rating: 3.5, distance: 8, scholarship: "International Bright Futures: £3,000", scholarshipAmount: 3000, tier: "Budget" },
-    { university: "Oxford Brookes University", course: "Computer Science for Cyber Security - MSc", duration: "1 year", fees: 17200, rating: 3.9, distance: 55, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "Robert Gordon University", course: "Information Technology with Cyber Security MSc", duration: "1 year", fees: 17650, rating: 3.8, distance: 550, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
     { university: "University of Aberdeen", course: "Cybersecurity MSc", duration: "1 year", fees: 27000, rating: 4.1, distance: 550, scholarship: "None listed", scholarshipAmount: 0, tier: "Premium" },
-    { university: "Ulster University - Birmingham", course: "MSc Computer Science and Technology", duration: "1 year", fees: 15840, rating: 3.6, distance: 115, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    
-    // 2-Year Programs
-    { university: "Northumbria University", course: "Cyber Security MSc with Advanced Practice", duration: "2 years", fees: 41000, rating: 4.0, distance: 280, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "Heriot Watt University UK", course: "Computing (2 years), MSc", duration: "2 years", fees: 41168, rating: 4.1, distance: 410, scholarship: "Merit Scholarships: £500,000+ pool (contact regional manager for Nigerian students)", scholarshipAmount: 0, tier: "Excellent" },
     { university: "Heriot Watt University UK", course: "Applied Cyber Security, MSc", duration: "1 year", fees: 24048, rating: 4.1, distance: 410, scholarship: "Merit Scholarships: £500,000+ pool (contact regional manager for Nigerian students)", scholarshipAmount: 0, tier: "Excellent" },
     
-    // Computing Programs
+    // Computing Programs (Rating 4.0+, 1 year only)
     { university: "Newcastle University", course: "Advanced Computer Science MSc", duration: "1 year", fees: 28800, rating: 4.7, distance: 280, scholarship: "Vice-Chancellor's Excellence: 50% tuition OR Vice-Chancellor's International: £7,000", scholarshipAmount: 14400, tier: "Premium" },
-    { university: "De Montfort University", course: "Computing MSc", duration: "1 year", fees: 17250, rating: 3.9, distance: 105, scholarship: "CEM Scholarship: £3,000", scholarshipAmount: 3000, tier: "Good" },
     { university: "Edinburgh Napier University", course: "MSc Computing", duration: "1 year", fees: 17090, rating: 4.2, distance: 410, scholarship: "GlobalScholarships.com: $3,000 (≈£2,400)", scholarshipAmount: 2400, tier: "Excellent" },
-    { university: "Liverpool John Moores University", course: "Computing and Information Systems, MSc", duration: "1 year", fees: 18250, rating: 3.9, distance: 210, scholarship: "International Achievement: £3,500", scholarshipAmount: 3500, tier: "Good" },
     { university: "Northumbria University", course: "Advanced Computer Science MSc", duration: "1 year", fees: 20500, rating: 4.0, distance: 280, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
     { university: "Nottingham Trent University", course: "Computing Systems MSc", duration: "1 year", fees: 18800, rating: 4.1, distance: 130, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "Oxford Brookes University", course: "Computing Science - MSc", duration: "1 year", fees: 17200, rating: 3.9, distance: 55, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
     { university: "Sheffield Hallam University", course: "MSc Computing", duration: "1 year", fees: 18600, rating: 4.0, distance: 165, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "Teesside University", course: "MSc Computing", duration: "1 year", fees: 15000, rating: 3.8, distance: 245, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Bedfordshire", course: "Applied Computing and Information Technology MSc", duration: "1 year", fees: 14600, rating: 3.7, distance: 40, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
     { university: "University of East Anglia", course: "MSc Computing", duration: "1 year", fees: 21200, rating: 4.1, distance: 120, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "University of East London", course: "MSc Computing", duration: "1 year", fees: 16740, rating: 3.6, distance: 15, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    { university: "University of Greenwich", course: "Computing and Information Systems, MSc", duration: "1 year", fees: 17450, rating: 3.7, distance: 18, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    { university: "University of Lancashire", course: "MSc Computing", duration: "1 year", fees: 19250, rating: 3.8, distance: 230, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
-    { university: "University of Roehampton", course: "MSc Computing", duration: "1 year", fees: 17500, rating: 3.6, distance: 8, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    { university: "University of South Wales", course: "MSc Computing and Information Systems", duration: "1 year", fees: 16500, rating: 3.7, distance: 145, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    { university: "University of Sunderland", course: "MSc Computing", duration: "1 year", fees: 16000, rating: 3.6, distance: 280, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
     { university: "University of Stirling", course: "MSc Advanced Computing with AI", duration: "1 year", fees: 22900, rating: 4.0, distance: 425, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
     
-    // Cloud Computing
+    // Cloud Computing (Rating 4.0+, 1 year only)
     { university: "Newcastle University", course: "Cloud Computing MSc", duration: "1 year", fees: 28800, rating: 4.6, distance: 280, scholarship: "Vice-Chancellor's Excellence: 50% tuition OR Vice-Chancellor's International: £7,000", scholarshipAmount: 14400, tier: "Premium" },
-    { university: "University of East London", course: "MSc Cloud Computing", duration: "1 year", fees: 16740, rating: 3.6, distance: 15, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
     { university: "University of Leicester", course: "Cloud Computing MSc", duration: "1 year", fees: 24975, rating: 4.1, distance: 110, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "University of Lincoln", course: "Cloud Computing MSc", duration: "1 year", fees: 17600, rating: 3.9, distance: 140, scholarship: "None listed", scholarshipAmount: 0, tier: "Good" },
     { university: "Sheffield Hallam University", course: "MSc Computing with Cloud Technologies", duration: "1 year", fees: 18600, rating: 4.0, distance: 165, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "Middlesex University", course: "MSc Network Management and Cloud Computing", duration: "1 year", fees: 17600, rating: 3.6, distance: 18, scholarship: "Chevening: Full tuition (competitive)", scholarshipAmount: 17600, tier: "Budget" },
     { university: "Nottingham Trent University", course: "MSc Cloud and Enterprise Computing", duration: "1 year", fees: 18800, rating: 4.0, distance: 130, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "University of Staffordshire", course: "Cloud and Network Computing MSc", duration: "1 year", fees: 16750, rating: 3.7, distance: 145, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    
-    // Health Data Science
-    { university: "Newcastle University", course: "Advanced Data Science with Health MSc", duration: "1 year", fees: 28800, rating: 4.7, distance: 280, scholarship: "Vice-Chancellor's Excellence: 50% tuition OR Vice-Chancellor's International: £7,000", scholarshipAmount: 14400, tier: "Premium" },
-    { university: "Birmingham City University", course: "Health Data Science and Clinical Informatics - MSc", duration: "1 year", fees: 17500, rating: 4.0, distance: 115, scholarship: "Postgraduate Merit-Based: £3,000", scholarshipAmount: 3000, tier: "Good" },
-    { university: "University of Aberdeen", course: "Health Data Science MSc", duration: "1 year", fees: 27000, rating: 4.2, distance: 550, scholarship: "None listed", scholarshipAmount: 0, tier: "Premium" },
-    { university: "University of Leicester", course: "Computational Health Data Science MSc", duration: "1 year", fees: 24975, rating: 4.1, distance: 110, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "Sheffield Hallam University", course: "MSc Healthcare Analytics and AI", duration: "1 year", fees: 18600, rating: 4.0, distance: 165, scholarship: "None listed", scholarshipAmount: 0, tier: "Excellent" },
-    { university: "University of West London", course: "MSc Health Informatics", duration: "1 year", fees: 16250, rating: 3.7, distance: 3, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
-    
-    // Specialized
-    { university: "University of East London", course: "MSc Cyber Diplomacy", duration: "1 year", fees: 16740, rating: 3.5, distance: 15, scholarship: "None listed", scholarshipAmount: 0, tier: "Budget" },
   ];
 
   const filteredPrograms = programs.filter(p => {
